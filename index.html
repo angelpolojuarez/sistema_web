@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SistemaWeb — Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">SistemaWeb</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+      <li><a href="#metricas" class="nav-link">Métricas</a></li>
+      <li><a href="#pipeline" class="nav-link">CI/CD</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot pulse"></span>
+      <span class="status-label">Sistema Activo</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-icon">⚡</span>
+        <span>Pipeline CI/CD Activo</span>
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Automatización<br /><em>Inteligente</em>
+      </h1>
+      <p class="hero-sub" id="hero-sub">
+        Monitoreo continuo, pruebas automatizadas y despliegue confiable.<br />
+        Tu sistema bajo control, en tiempo real.
+      </p>
+      <div class="hero-cta" id="hero-cta">
+        <a href="#metricas" class="btn-primary">Ver Métricas</a>
+        <a href="#pipeline" class="btn-ghost">Ver Pipeline</a>
+      </div>
+    </div>
+    <div class="hero-terminal" id="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">github-actions — bash</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">npm run test</span></p>
+        <p class="t-line t-ok">✓ index.html existe</p>
+        <p class="t-line t-ok">✓ CSS cargado correctamente</p>
+        <p class="t-line t-ok">✓ JavaScript ejecutado</p>
+        <p class="t-line t-ok">✓ Estructura HTML válida</p>
+        <p class="t-line t-ok">✓ Meta tags presentes</p>
+        <p class="t-line t-ok">✓ Tiempo de carga: 0.42s</p>
+        <p class="t-line"><span class="t-prompt">$</span> <span class="t-info">Tests: 6 passed, 0 failed</span></p>
+        <p class="t-line t-success">→ Deploy completado en GitHub Pages ✓</p>
+        <p class="t-line blink-cursor">▋</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS -->
+  <section class="metrics-section" id="metricas">
+    <div class="section-header">
+      <span class="section-tag">MONITOREO</span>
+      <h2 class="section-title">Métricas del Sistema</h2>
+      <p class="section-desc">Resultados en tiempo real de las pruebas automatizadas del pipeline CI/CD</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card" data-delay="0">
+        <div class="metric-icon">🧪</div>
+        <div class="metric-value" data-target="98">0</div>
+        <div class="metric-unit">%</div>
+        <div class="metric-label">Tests Pasados</div>
+        <div class="metric-bar"><div class="metric-fill" style="width:98%"></div></div>
+      </div>
+      <div class="metric-card" data-delay="100">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-value" data-target="420">0</div>
+        <div class="metric-unit">ms</div>
+        <div class="metric-label">Tiempo de Carga</div>
+        <div class="metric-bar"><div class="metric-fill" style="width:72%"></div></div>
+      </div>
+      <div class="metric-card" data-delay="200">
+        <div class="metric-icon">🚀</div>
+        <div class="metric-value" data-target="47">0</div>
+        <div class="metric-unit">runs</div>
+        <div class="metric-label">Deployments</div>
+        <div class="metric-bar"><div class="metric-fill" style="width:85%"></div></div>
+      </div>
+      <div class="metric-card" data-delay="300">
+        <div class="metric-icon">✅</div>
+        <div class="metric-value" data-target="100">0</div>
+        <div class="metric-unit">%</div>
+        <div class="metric-label">Uptime</div>
+        <div class="metric-bar"><div class="metric-fill" style="width:100%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="pipeline-section" id="pipeline">
+    <div class="section-header">
+      <span class="section-tag">CI/CD</span>
+      <h2 class="section-title">Flujo del Pipeline</h2>
+      <p class="section-desc">Cada push activa el pipeline automático de GitHub Actions</p>
+    </div>
+    <div class="pipeline-flow">
+      <div class="pipeline-step active" data-step="1">
+        <div class="step-icon">📝</div>
+        <div class="step-info">
+          <div class="step-name">Code Push</div>
+          <div class="step-desc">git push → main</div>
+        </div>
+        <div class="step-status done">DONE</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step active" data-step="2">
+        <div class="step-icon">🔍</div>
+        <div class="step-info">
+          <div class="step-name">Checkout</div>
+          <div class="step-desc">actions/checkout@v4</div>
+        </div>
+        <div class="step-status done">DONE</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step active" data-step="3">
+        <div class="step-icon">🧪</div>
+        <div class="step-info">
+          <div class="step-name">Tests</div>
+          <div class="step-desc">npm run test</div>
+        </div>
+        <div class="step-status done">DONE</div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-step active" data-step="4">
+        <div class="step-icon">🚀</div>
+        <div class="step-info">
+          <div class="step-name">Deploy</div>
+          <div class="step-desc">GitHub Pages</div>
+        </div>
+        <div class="step-status done">DONE</div>
+      </div>
+    </div>
+
+    <!-- CODE BLOCK -->
+    <div class="code-block">
+      <div class="code-header">
+        <span class="code-file">.github/workflows/ci.yml</span>
+        <span class="code-lang">YAML</span>
+      </div>
+      <pre class="code-content"><code><span class="yaml-key">name:</span> <span class="yaml-val">CI/CD — SistemaWeb</span>
+
+<span class="yaml-key">on:</span>
+  <span class="yaml-key">push:</span>
+    <span class="yaml-key">branches:</span> <span class="yaml-val">[ main ]</span>
+  <span class="yaml-key">pull_request:</span>
+    <span class="yaml-key">branches:</span> <span class="yaml-val">[ main ]</span>
+
+<span class="yaml-key">jobs:</span>
+  <span class="yaml-key">test-and-deploy:</span>
+    <span class="yaml-key">runs-on:</span> <span class="yaml-val">ubuntu-latest</span>
+    <span class="yaml-key">steps:</span>
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Checkout código</span>
+        <span class="yaml-key">uses:</span> <span class="yaml-val">actions/checkout@v4</span>
+
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Setup Node.js</span>
+        <span class="yaml-key">uses:</span> <span class="yaml-val">actions/setup-node@v4</span>
+        <span class="yaml-key">with:</span>
+          <span class="yaml-key">node-version:</span> <span class="yaml-val">'20'</span>
+
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Instalar dependencias</span>
+        <span class="yaml-key">run:</span> <span class="yaml-val">npm install</span>
+
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Ejecutar pruebas automáticas</span>
+        <span class="yaml-key">run:</span> <span class="yaml-val">npm run test</span>
+
+      - <span class="yaml-key">name:</span> <span class="yaml-val">Deploy a GitHub Pages</span>
+        <span class="yaml-key">uses:</span> <span class="yaml-val">peaceiris/actions-gh-pages@v4</span>
+        <span class="yaml-key">if:</span> <span class="yaml-val">github.ref == 'refs/heads/main'</span>
+        <span class="yaml-key">with:</span>
+          <span class="yaml-key">github_token:</span> <span class="yaml-val">${{ secrets.GITHUB_TOKEN }}</span>
+          <span class="yaml-key">publish_dir:</span> <span class="yaml-val">./</span></code></pre>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <span class="section-tag">PROYECTO</span>
+        <h2 class="section-title">SistemaWeb CI/CD</h2>
+        <p>Pipeline completo con pruebas automatizadas, despliegue continuo y monitoreo del sistema. Desarrollado con GitHub Actions y GitHub Pages.</p>
+        <div class="contact-badges">
+          <span class="badge">GitHub Actions</span>
+          <span class="badge">Node.js Tests</span>
+          <span class="badge">GitHub Pages</span>
+          <span class="badge">HTML5 / CSS3 / JS</span>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-stat">
+          <span class="stat-num">6</span>
+          <span class="stat-lbl">Pruebas Automáticas</span>
+        </div>
+        <div class="contact-stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-lbl">Tasa de Éxito</span>
+        </div>
+        <div class="contact-stat">
+          <span class="stat-num">~30s</span>
+          <span class="stat-lbl">Tiempo del Pipeline</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="brand-name">SistemaWeb</span>
+      <span class="footer-sep">·</span>
+      <span>Pipeline CI/CD con GitHub Actions</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-year">2025</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
